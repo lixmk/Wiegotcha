@@ -140,10 +140,10 @@ gcc -o ../wiegotcha wiegotcha.c -L/usr/local/lib -lwiringPi -lpthread
 #TODO: Hoping to eliminate the interaction.
 echo "[+] Enabling i2c on boot."
 echo -e "\e[0;31m[+] This step requires the use of raspi-config, which is a manual process\e[0m."
-echo -e "\e[0;31m[+] Use Advanced Options (9), then i2c (A6), yes, then finish.\e[0m"
-echo -e "\e[0;31m[+] Once completed, reboot. Upon reboot, login sudo su (or login as root)\e[0m"
-echo -e "\e[0;31m[+] Once you're root, type 'screen -dr install' to complete the installation.\e[0m"
+echo -e "\e[0;31m[+] Use Interfacing Options (5), then I2C (P5), yes, then finish.\e[0m"
 echo -n -e "\e[0;31m[+] When you're ready, press any key to continue: \e[0m"
 read -e NULL
 raspi-config
+echo -e "\e[0;31m[+] The system will now reboot. After reboot, login then 'sudo su -' (or login as root)\e[0m"
+echo -e "\e[0;31m[+] Once you're root, type 'screen -dr install' to complete the installation.\e[0m"
 reboot
