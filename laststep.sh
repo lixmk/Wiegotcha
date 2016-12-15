@@ -71,9 +71,10 @@ cp ./confs/rc.local /etc/rc.local
 cd ~/
 
 rm ./laststep.sh
-hwclock -r && date
 echo -e "\e[0;31m[+] Installation almost complete.\e[0m"
-echo -e "\e[0;31m[+] One more reboot. After reboot, run ~/fixclock.sh to fix the hardware clock.\e[0m"
+echo -e "\e[0;31m[+] One more reboot needed.\e[0m"
+echo -e "\e[0;31m[+] After reboot, if your hwclock time (UTC) is incorrect, run /root/Wiegotcha/fixclock.sh\e[0m"
+echo ""
 echo -n -e "\e[0;31m[+]Press any key to reboot.\e[0m"
 read -e NULL
 reboot
