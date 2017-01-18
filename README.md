@@ -78,8 +78,8 @@ Short version:
 * Raspberry Pi 3: https://www.amazon.com/dp/B01CD5VC92/  
 * RFID Reader (Maxiprox 5375, Indala ASR-620, iClass R90): https://www.amazon.com/dp/B002I15F90/ (Maxiprox 5375. Check eBay for better prices)  
 * Level Shifter: https://www.amazon.com/dp/B00RT03GSC/, https://www.sparkfun.com/products/12009 (Many option exist, some may come presoldered for the extra lazy)  
-* DS3231 Real-time Clock: https://www.amazon.comdp/B00HF4NUSS/  
-* Micro SD Card (Faster the better): https://www.amazon.com//dp/B017NT8PNE/ (Just an example)  
+* DS3231 Real-time Clock: https://www.amazon.com/dp/B00HF4NUSS/  
+* Micro SD Card (Faster the better): https://www.amazon.com/dp/B017NT8PNE/ (Just an example)  
 * 12v Battery with 5v USB: https://www.amazon.com/dp/B00ME3ZH7C/  
 * Jumper wires (I use 5 Female to Female and 3 Male to Female): https://www.amazon.com/dp/B01EV70C78/  
 * Short USB Mirco Cable: https://www.amazon.com/dp/B00VXH697W/  
