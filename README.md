@@ -49,9 +49,9 @@ Easy mode installation is basically the same as installing Raspbian.
 ###Manual (longer) Mode
 "Manual" installation is still fairly straight forward. Feel free to explore install.sh and laststep.sh to fully understand what they do.  
 1. Burn a fresh raspbian SD card. You can use Jessie or Jessie-lite.  
-2. Run `sudo su -` to become root
+2. Run `sudo su -` to become root  
 3. Run `apt-get update && apt-get -y install git #Skip this step if you're using full Jessie`  
-4. In /root run `git clone https://github.com/lixmk/Wiegotcha`
+4. In /root run `git clone https://github.com/lixmk/Wiegotcha`  
 5. Run `cd Wiegotcha && ./install.sh`  
 6. The install script will walk you through everything, including a reboot.  
 7. After first reboot run `screen -dr install` (as root)  
@@ -69,9 +69,9 @@ Short version:
 5. Run Rpi pin 12 to Level Shifter LV 4.  
 6. Run RPi pin 17 to Level Shifter LV in.  
 7. Reader TB1-3 to Battery Ground (Black).  
-8. Reader TB1-1 to Battery 12v (Red).
-9. Reader TB2-1 to Level Shifter HV 1
-10. Reader TB2-2 to Level Shifter HV 4
+8. Reader TB1-1 to Battery 12v (Red).  
+9. Reader TB2-1 to Level Shifter HV 1  
+10. Reader TB2-2 to Level Shifter HV 4  
 11. Reader TB1-2 to Level Shifter HV gnd.  
 12. OPTIONAL: Remove Speaker.  
 13. OPTIONAL: Solder haptic motor.  
