@@ -49,29 +49,32 @@ Easy mode installation is basically the same as installing Raspbian.
 ###Manual (longer) Mode
 "Manual" installation is still fairly straight forward. Feel free to explore install.sh and laststep.sh to fully understand what they do.  
 1. Burn a fresh raspbian SD card. You can use Jessie or Jessie-lite.  
-2. Run `apt-get update && apt-get -y install git #Skip this step if you're using full Jessie`  
-3. Run `git clone https://github.com/lixmk/Wiegotcha`  
-4. Run `cd Wiegotcha && ./install.sh`  
-5. The install script will walk you through everything, including a reboot.  
-6. After first reboot run `screen -dr install`  
-7. Follow instructions to complete final steps of installation.  
-8. Proceed to Hardware Installation.  
+2. Run `sudo su -` to become root
+3. Run `apt-get update && apt-get -y install git #Skip this step if you're using full Jessie`  
+4. In /root run `git clone https://github.com/lixmk/Wiegotcha`
+5. Run `cd Wiegotcha && ./install.sh`  
+6. The install script will walk you through everything, including a reboot.  
+7. After first reboot run `screen -dr install` (as root)  
+8. Follow instructions to complete final steps of installation.  
+9. Proceed to Hardware Installation.  
   
 ##Hardware Installation
 Thorough instructions: http://exfil.co/2017/01/17/wiegotcha-rfid-thief/
 
 Short version:  
-1. Place the RTC on the RPi's GPIO starting at pin 1 (top left), going doing the left side to pin 9.  
+1. Place the RTC on the RPi's GPIO starting at pin 1 (top left), going down the left side to pin 9.  
 2. Run RPi pin 4 to Level Shifter HV in.  
 3. Run RPi pin 6 to Level Shifter LV gnd.  
 4. Run RPi pin 11 to Level Shifter LV 1.  
 5. Run Rpi pin 12 to Level Shifter LV 4.  
 6. Run RPi pin 17 to Level Shifter LV in.  
 7. Reader TB1-3 to Battery Ground (Black).  
-8. Reader TB1-1 to Battery 12v (Red).  
-9. Reader TB1-2 to Level Shifter HV gnd.  
-10. OPTIONAL: Remove Speaker.  
-11. OPTIONAL: Solder haptic motor.  
+8. Reader TB1-1 to Battery 12v (Red).
+9. Reader TB2-1 to Level Shifter HV 1
+10. Reader TB2-2 to Level Shifter HV 4
+11. Reader TB1-2 to Level Shifter HV gnd.  
+12. OPTIONAL: Remove Speaker.  
+13. OPTIONAL: Solder haptic motor.  
 
 ##BOM
 * Raspberry Pi 3: https://www.amazon.com/dp/B01CD5VC92/  
