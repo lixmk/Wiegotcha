@@ -455,6 +455,31 @@ int wiegandReadData(void* data, int dataMaxLen) {
     return 0;
 }
 
+// Function for masking chunk1 for block 7 generation
+unsigned long maskMagicChunk1(int bitLen, unsigned long chunk1) {
+    //printf("-- Starting maskMagic --\n");
+    // Mask chunk 1
+    unsigned long maskChunk1 = chunk1 & 0xFFFFF; // 20 bits
+    //printf("-- maskChunk1: %x\n", maskChunk1);
+    // Create no so big mask
+    int maskCount = (bitLen - 24) / 4;
+    if ((bitLen - 24) % 4 != 0) {
+        maskCount++;
+    }
+    //printf("-- maskCount: %d\n", maskCount);
+    unsigned long mask = 0xF;
+    for (int i = 1; i < maskCount; i++) {
+        mask <<= 4;
+        mask += 0xF;
+    }
+    //printf("-- mask: %x\n", mask);
+    // Mask full value
+    unsigned long maskedCombinedChunk = maskChunk1 & mask;
+    //printf("-- maskedCombinedChunk: %x\n", maskedCombinedChunk);
+    // Return masked value
+    return maskedCombinedChunk;
+}
+
 void main(void) {
     int i;
 
@@ -488,6 +513,7 @@ void main(void) {
             fprintf(out2, "%d,", facilityCode);
             fprintf(out2, "%d,", cardCode);
             fprintf(out2, "%x%x,", cardChunk1, cardChunk2);
+            fprintf(out2, "%010x%06x,", maskMagicChunk1(bitLen, cardChunk1), cardChunk2);
             for (i = 19; i >= 0; i--) {
               fprintf(out2, "%d", bitRead(cardChunk1, i));
             }
@@ -501,6 +527,7 @@ void main(void) {
             printf("FC:%d  ", facilityCode);
             printf("ID:%d  ", cardCode);
             printf("Hex:%x%x  ", cardChunk1, cardChunk2);
+            printf("Blk7:%010x%06x  ", maskMagicChunk1(bitLen, cardChunk1), cardChunk2);
             printf("Bits: ");
             for (i = 19; i >= 0; i--) {
             printf("%d", bitRead(cardChunk1, i));
