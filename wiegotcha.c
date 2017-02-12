@@ -468,7 +468,8 @@ unsigned long maskMagicChunk1(int bitLen, unsigned long chunk1) {
     }
     //printf("-- maskCount: %d\n", maskCount);
     unsigned long mask = 0xF;
-    for (int i = 1; i < maskCount; i++) {
+    int i;
+    for (i = 1; i < maskCount; i++) {
         mask <<= 4;
         mask += 0xF;
     }
