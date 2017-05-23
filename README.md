@@ -38,9 +38,9 @@ Future Plans (I should say hopes):
 ### Easy Mode  
 Easy mode installation is basically the same as installing Raspbian.  
 1. Download the image from https://drive.google.com/file/d/0B1KiYGoUoNwGem8tZlRxeEVwRHM/  
-2. Check .gz md5 sum: 7ef8867d5bcb97956bbb2d77653d8adf.  
+2. Check .gz md5 sum: 7f8b0507e0b58cbc301b39550c59e33d.  
 3. Decompress the image.  
-4. Check .img md5 sum: 635b19d7c6d34a40aa461a71089910c3.  
+4. Check .img md5 sum: b68d21f1c0e6b200985a29869491fbf0.  
 5. Use dd or whatever windows uses to push the image to your sd card.  
 6. Ensure ethernet cable is connected and boot.  
 7. Run `/root/Wiegotcha/fixclock.sh` to set correct time to hardware clock.  
