@@ -1,4 +1,4 @@
-#Wiegotcha: Long Range RFID Thieving  
+# Wiegotcha: Long Range RFID Thieving  
 Wiegotcha is the next evolution of Long Range RFID badge capturing. Based on previous work by Fran Brown and Bishop Fox (Tastic RFID Thief), Wiegotcha uses a Raspberry Pi in place of an Arduino for the added capabilities and ease of customization. One of the immediate benefits of using an RPi is quick and easy wireless communication with the badge reader.  
   
 Before going any further, I want to make sure to acknowledge those who helped this project, without knowing they did so.  
@@ -8,7 +8,7 @@ Before going any further, I want to make sure to acknowledge those who helped th
 4. Derek Eder for his csv to html code (https://github.com/derekeder/csv-to-html-table).  
 5. Gordon Henterson for the wiringPi library (https://projects.drogon.net/raspberry-pi/wiringpi/).  
   
-##Information  
+## Information  
 Wiegotcha is a simple to build, simple to install, and simple to use tool for capturing RFID badge information from unsuspecting targets. Similar to it's predicessor, the Tastic RFID Thief, the Wiegotcha is designed to be placed inside an HID Maxiprox 5375 (125kHz ProxII cards), Indala ASR-620 (Indala), or an HID R90 (13.56mHz iClass cards). Wiegotcha improves upon previous publicly released long range RFID readers by incorporating wifi out of the box as well as hardware clock for accurate timestamps. Moving from Arduino to Raspberry Pi also means the Wiegotcha is easily customized and improved.  
   
 Wiegotcha is intended to be built with a Raspberry Pi 3, but the code has been tested on an B+ and 2 (with external Wi-Fi). Testing has not been done on a RPi zero, but it should work. Check out the associated blog post at: http://exfil.co/2017/01/17/wiegotcha-rfid-thief/.  
@@ -34,10 +34,10 @@ Future Plans (I should say hopes):
 * Push notifications?  
 * Camera?    
   
-##Code Installation
-###Easy Mode  
+## Code Installation
+### Easy Mode  
 Easy mode installation is basically the same as installing Raspbian.  
-1. Download the image from https://drive.google.com/open?id=0B9S4W-e61-A7SElWUU1POVBiUEU.  
+1. Download the image from https://drive.google.com/file/d/0B1KiYGoUoNwGem8tZlRxeEVwRHM/  
 2. Check .gz md5 sum: 7ef8867d5bcb97956bbb2d77653d8adf.  
 3. Decompress the image.  
 4. Check .img md5 sum: 635b19d7c6d34a40aa461a71089910c3.  
@@ -46,7 +46,7 @@ Easy mode installation is basically the same as installing Raspbian.
 7. Run `/root/Wiegotcha/fixclock.sh` to set correct time to hardware clock.  
 8. Proceed to Hardware Installation.  
   
-###Manual (longer) Mode
+### Manual (longer) Mode
 "Manual" installation is still fairly straight forward. Feel free to explore install.sh and laststep.sh to fully understand what they do.  
 1. Burn a fresh raspbian SD card. You can use Jessie or Jessie-lite.  
 2. Run `sudo su -` to become root  
@@ -58,7 +58,7 @@ Easy mode installation is basically the same as installing Raspbian.
 8. Follow instructions to complete final steps of installation.  
 9. Proceed to Hardware Installation.  
   
-##Hardware Installation
+## Hardware Installation
 Thorough instructions: http://exfil.co/2017/01/17/wiegotcha-rfid-thief/
 
 Short version:  
@@ -76,7 +76,7 @@ Short version:
 12. OPTIONAL: Remove Speaker.  
 13. OPTIONAL: Solder haptic motor.  
 
-##BOM
+## BOM
 * Raspberry Pi 3: https://www.amazon.com/dp/B01CD5VC92/  
 * RFID Reader (Maxiprox 5375, Indala ASR-620, iClass R90): https://www.amazon.com/dp/B002I15F90/ (Maxiprox 5375. Check eBay for better prices)  
 * Level Shifter: https://www.amazon.com/dp/B00RT03GSC/, https://www.sparkfun.com/products/12009 (Many option exist, some may come presoldered for the extra lazy)  
