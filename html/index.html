@@ -22,7 +22,7 @@
       <h2>Wiegotcha Stolen Credentials</h2>
       <div>
       <button id="refresh" onclick="window.toggleRefresh()" class="btn btn-default">Enable Auto-Refresh</Button>
-      <button onclick="location.reload()" class="btn btn-info">Refresh</button>
+      <button onclick="location.reload(true)" class="btn btn-info">Refresh</button>
       </div>
       <div id='table-container'></div>
       </div><!-- /.container -->
@@ -46,7 +46,7 @@
        localStorage.setItem("autorefresh", true);
        refreshButton.innerText = "Disable Auto-Refresh"
        timer = setTimeout(function () {
-         location.reload();
+         location.reload(true);
        }, 5000);
       } else {
        localStorage.setItem("autorefresh", false);
@@ -62,7 +62,7 @@
           return refreshButton.innerText = "Enable Auto-Refresh";
         }
         timer = setTimeout(function () {
-          location.reload();
+          location.reload(true);
         }, 5000);
         localStorage.setItem("autorefresh", true);
         console.log("setting button to true");
