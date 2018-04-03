@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Wiegotcha</title>
-    <meta http-equiv="refresh" content="5" >
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dataTables.bootstrap.css" rel="stylesheet">
@@ -21,6 +20,10 @@
     <div class="container-fluid">
 
       <h2>Wiegotcha Stolen Credentials</h2>
+      <div>
+      <button id="refresh" onclick="window.toggleRefresh()" class="btn btn-default">Enable Auto-Refresh</Button>
+      <button onclick="location.reload(true)" class="btn btn-info">Refresh</button>
+      </div>
       <div id='table-container'></div>
       </div><!-- /.container -->
     <!-- Bootstrap core JavaScript
@@ -34,9 +37,42 @@
     <script src='js/csv_to_html_table.js'></script>
 
     <script>
+      // Set initial state of the page
+      var refresh = localStorage.getItem("autorefresh");
+      var refreshButton = document.getElementById("refresh");
+
+      var timer;
+      if (refresh == "true") {
+       localStorage.setItem("autorefresh", true);
+       refreshButton.innerText = "Disable Auto-Refresh"
+       timer = setTimeout(function () {
+         location.reload(true);
+       }, 5000);
+      } else {
+       localStorage.setItem("autorefresh", false);
+       refreshButton.innerText = "Enable Auto-Refresh"
+      }
+
+      window.toggleRefresh = function () {
+        var refresh = localStorage.getItem("autorefresh");
+        if (refresh == "true") {
+          console.log("setting button to false");
+          clearTimeout(timer);
+          localStorage.setItem("autorefresh", false);
+          return refreshButton.innerText = "Enable Auto-Refresh";
+        }
+        timer = setTimeout(function () {
+          location.reload(true);
+        }, 5000);
+        localStorage.setItem("autorefresh", true);
+        console.log("setting button to true");
+        return refreshButton.innerText = "Disable Auto-Refresh";
+      }
+    </script>
+    <script>
       init_table({
-        csv_path: 'data.csv', 
-        element: 'table-container', 
+        csv_path: 'data.csv',
+        element: 'table-container',
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false}
