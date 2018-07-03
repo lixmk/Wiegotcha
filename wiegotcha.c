@@ -513,7 +513,7 @@ void main(void) {
             fprintf(out2, "%d,", bitLen);
             fprintf(out2, "%d,", facilityCode);
             fprintf(out2, "%d,", cardCode);
-            fprintf(out2, "%x%x,", cardChunk1, cardChunk2);
+            fprintf(out2, "%x%06x,", cardChunk1, cardChunk2);
             fprintf(out2, "%010x%06x,", maskMagicChunk1(bitLen, cardChunk1), cardChunk2);
             for (i = 19; i >= 0; i--) {
               fprintf(out2, "%d", bitRead(cardChunk1, i));
@@ -527,7 +527,7 @@ void main(void) {
             printf("Bit#:%d  ", bitLen);
             printf("FC:%d  ", facilityCode);
             printf("ID:%d  ", cardCode);
-            printf("Hex:%x%x  ", cardChunk1, cardChunk2);
+            printf("Hex:%x%06x  ", cardChunk1, cardChunk2);
             printf("Blk7:%010x%06x  ", maskMagicChunk1(bitLen, cardChunk1), cardChunk2);
             printf("Bits: ");
             for (i = 19; i >= 0; i--) {
