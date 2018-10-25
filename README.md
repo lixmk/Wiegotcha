@@ -84,5 +84,5 @@ Short version:
 * Micro SD Card (8GB or larger): https://www.amazon.com/dp/B017NT8PNE/ (Just an example)  
 * 12v Battery with 5v USB: https://www.amazon.com/dp/B00ME3ZH7C/  
 * Jumper wires (I use 5 Female to Female and 3 Male to Female): https://www.amazon.com/dp/B01EV70C78/  
-* Short USB Mirco Cable: https://www.amazon.com/dp/B00VXH697W/  
+* Short USB Mirco Cable:  https://www.amazon.com/dp/B011KMSNXM/  
 * Haptic Motor (Optional) : https://www.adafruit.com/products/1201  
