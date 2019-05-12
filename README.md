@@ -77,12 +77,15 @@ Short version:
 13. OPTIONAL: Solder haptic motor.  
 
 ## BOM
-* Raspberry Pi 3: https://www.amazon.com/dp/B01CD5VC92/  
-* RFID Reader (Maxiprox 5375, Indala ASR-620, iClass R90): https://www.amazon.com/dp/B002I15F90/ (Maxiprox 5375. Check eBay for better prices)  
-* Level Shifter: https://www.amazon.com/dp/B00RT03GSC/, https://www.sparkfun.com/products/12009 (Many option exist, some may come presoldered for the extra lazy)  
-* DS3231 Real-time Clock: https://www.amazon.com/dp/B00HF4NUSS/  
-* Micro SD Card (8GB or larger): https://www.amazon.com/dp/B017NT8PNE/ (Just an example)  
-* 12v Battery with 5v USB: https://www.amazon.com/dp/B00ME3ZH7C/  
-* Jumper wires (I use 5 Female to Female and 3 Male to Female): https://www.amazon.com/dp/B01EV70C78/  
-* Short USB Mirco Cable:  https://www.amazon.com/dp/B011KMSNXM/  
-* Haptic Motor (Optional) : https://www.adafruit.com/products/1201  
+Links change quite often but I try to keep the BOM list at the bottom of the blog post updated: http://exfil.co/2017/01/17/wiegotcha-rfid-thief/
+
+List:
+* Raspberry Pi 3 
+* RFID Reader (Maxiprox 5375, Indala ASR-620, iClass R90)
+* Level Shifter
+* DS3231 Real-time Clock
+* Micro SD Card (8GB or larger)
+* 12v Battery with 5v USB
+* Jumper wires (I use 5 Female to Female and 3 Male to Female)
+* Short USB Mirco Cable
+* Haptic Motor (Optional)
