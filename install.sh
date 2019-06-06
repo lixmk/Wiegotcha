@@ -104,7 +104,7 @@ echo "[*] Proceeding with installation."
 echo "[*] Updating raspbian. This could take a while..."
 apt-get update
 apt-get -y dist-upgrade
-apt-get -y install apache2 hostapd isc-dhcp-server screen
+apt-get -y install apache2 hostapd isc-dhcp-server screen ntpdate
 echo "[*] Updating complete."
 
 #Changing hostname for purely vain reasons
