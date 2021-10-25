@@ -37,7 +37,7 @@ Future Plans (I should say hopes):
 ## Code Installation
 ### Easy Mode  
 Easy mode installation is basically the same as installing Raspbian.  
-1. Download the image from https://drive.google.com/file/d/0B1KiYGoUoNwGem8tZlRxeEVwRHM/  
+1. Download the image from https://drive.google.com/file/d/0B9S4W-e61-A7SElWUU1POVBiUEU/view?usp=sharing&resourcekey=0--xEJ7NguQLZxiAr0UuMcWA
 2. Check .gz md5 sum: 7f8b0507e0b58cbc301b39550c59e33d.  
 3. Decompress the image.  
 4. Check .img md5 sum: b68d21f1c0e6b200985a29869491fbf0.  
